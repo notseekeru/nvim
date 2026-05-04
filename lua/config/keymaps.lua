@@ -6,7 +6,7 @@ local harpoon = require("harpoon")
 harpoon:setup()
 
 -- Basic keymaps
-vim.keymap.set("n", "<leader>a", function()
+vim.keymap.set("n", "<C-a>", function()
   harpoon:list():add()
 end)
 vim.keymap.set("n", "<C-e>", function()
