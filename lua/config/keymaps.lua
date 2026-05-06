@@ -25,4 +25,10 @@ vim.keymap.set("n", "<leader>h4", function()
   harpoon:list():select(4)
 end)
 
+vim.keymap.set("n", ";", ":", { noremap = true })
+vim.keymap.set("n", ":", ";", { noremap = true })
+vim.opt.timeoutlen = 100
+vim.keymap.set("n", "<C-d>", "<C-d>zz", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-u>", "<C-u>zz", { noremap = true, silent = true })
+
 vim.keymap.set("n", "<F5>", ":w<CR>:!java %<CR>", { desc = "Run Python Script" })
