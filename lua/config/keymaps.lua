@@ -24,3 +24,5 @@ end)
 vim.keymap.set("n", "<leader>h4", function()
   harpoon:list():select(4)
 end)
+
+vim.keymap.set("n", "<F5>", ":w<CR>:!java %<CR>", { desc = "Run Python Script" })
