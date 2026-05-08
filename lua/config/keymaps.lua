@@ -31,8 +31,6 @@ vim.opt.timeoutlen = 100
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { noremap = true, silent = true })
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { noremap = true, silent = true })
 
-vim.keymap.set("n", "<F5>", ":w<CR>:!java %<CR>", { desc = "Run File Script" })
-
 -- Move line up and down (Normal Mode)
 vim.keymap.set("n", "<A-j>", ":m .+1<CR>==", { desc = "Move down" })
 vim.keymap.set("n", "<A-k>", ":m .-2<CR>==", { desc = "Move up" })
