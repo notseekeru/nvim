@@ -38,3 +38,10 @@ vim.keymap.set("n", "<A-k>", ":m .-2<CR>==", { desc = "Move up" })
 -- Move line up and down (Insert Mode)
 vim.keymap.set("i", "<A-j>", "<Esc>:m .+1<CR>==gi", { desc = "Move down" })
 vim.keymap.set("i", "<A-k>", "<Esc>:m .-2<CR>==gi", { desc = "Move up" })
+
+-- Yanking Remap (No Previous Delete Last Copy)
+vim.keymap.set("x", "<leader>p", '"_dP')
+
+-- Clipboard Remap (Copy)
+vim.keymap.set("v", "<leader>y", '"+y')
+vim.keymap.set("n", "<leader>y", '"+y')
