@@ -15,7 +15,8 @@
     "sessionRetention": {
       "maxAge": "1w"
     },
-    "preferredEditor": "vim"
+    "preferredEditor": "vim",
+    "vimMode": false
   },
   "output": {
     "format": "text"
@@ -31,7 +32,7 @@
     "showLineNumbers": false,
     "showCitations": true,
     "showModelInfoInChat": true,
-    "useBackgroundColor": true,
+    "useBackgroundColor": false,
     "autoThemeSwitching": true,
     "hideTips": true,
     "theme": "Holiday"
@@ -40,6 +41,9 @@
     "name": "gemini-3.1-flash-lite-preview"
   },
   "tools": {
+    "shell": {
+      "enableInteractiveShell": false
+    },
     "disableLLMCorrection": true
   },
   "experimental": {
@@ -47,9 +51,13 @@
     "modelSteering": true,
     "contextManagement": true,
     "generalistProfile": false,
-    "memoryV2": false
+    "memoryV2": false,
+    "autoMemory": false
   },
   "skills": {
     "enabled": true
+  },
+  "context": {
+    "loadMemoryFromIncludeDirectories": false
   }
 }

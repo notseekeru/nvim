@@ -1,0 +1,18 @@
+# Force 256color profile mapping
+set -g default-terminal "screen-256color"
+set-option -sa terminal-features ",screen-256color:RGB"
+
+# Enable direct UTF-8 sequence passing 
+set -q -g utf8 on
+set-window-option -q -g utf8 on
+
+set -g mouse on
+
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
+
+set -g @continuum-restore 'on'
+
+run '~/.tmux/plugins/tpm/tpm'

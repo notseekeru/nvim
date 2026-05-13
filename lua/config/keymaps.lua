@@ -29,7 +29,7 @@ vim.keymap.set("n", ";", ":", { noremap = true })
 vim.keymap.set("n", ":", ";", { noremap = true })
 vim.opt.timeoutlen = 100
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { noremap = true, silent = true })
-vim.keymap.set("n", "<C-u>", "<C-u>zz", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-e>", "<C-u>zz", { noremap = true, silent = true })
 
 -- Move line up and down (Normal Mode)
 vim.keymap.set("n", "<A-j>", ":m .+1<CR>==", { desc = "Move down" })
@@ -38,6 +38,9 @@ vim.keymap.set("n", "<A-k>", ":m .-2<CR>==", { desc = "Move up" })
 -- Move line up and down (Insert Mode)
 vim.keymap.set("i", "<A-j>", "<Esc>:m .+1<CR>==gi", { desc = "Move down" })
 vim.keymap.set("i", "<A-k>", "<Esc>:m .-2<CR>==gi", { desc = "Move up" })
+
+-- Select all (Normal Mode)
+vim.keymap.set("n", "<C-a>", "bbbggVGeee")
 
 -- Yanking Remap (No Previous Delete Last Copy)
 vim.keymap.set("x", "<leader>p", '"_dP')
