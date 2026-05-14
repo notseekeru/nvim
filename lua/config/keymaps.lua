@@ -25,9 +25,30 @@ vim.keymap.set("n", "<leader>h4", function()
     harpoon:list():select(4)
 end)
 
+-- Escape Remap (All mode)
+vim.keymap.set("n", "kj", "<Esc>")
+vim.keymap.set("i", "kj", "<Esc>")
+vim.keymap.set("v", "kj", "<Esc>")
+vim.keymap.set("c", "kj", "<Esc>")
+
+-- Disable Esc Key (All mode)
+vim.keymap.set("n", "<Esc>", "<Nop>")
+vim.keymap.set("i", "<Esc>", "<Nop>")
+vim.keymap.set("v", "<Esc>", "<Nop>")
+vim.keymap.set("c", "<Esc>", "<Nop>")
+
+-- Upward Select
+vim.keymap.set("v", "J", "j")
+
+-- Downward Select
+vim.keymap.set("v", "K", "k")
+
+-- Remap of ;
 vim.keymap.set("n", ";", ":", { noremap = true })
 vim.keymap.set("n", ":", ";", { noremap = true })
 vim.opt.timeoutlen = 100
+
+-- Ctrl D and E for upward and downward long navigation
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { noremap = true, silent = true })
 vim.keymap.set("n", "<C-e>", "<C-u>zz", { noremap = true, silent = true })
 
