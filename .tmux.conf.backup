@@ -1,5 +1,8 @@
 set -g mouse on
 
+unbind C-o
+bind-key m select-pane -t :.+
+
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-sensible'
 set -g @plugin 'tmux-plugins/tmux-resurrect'
