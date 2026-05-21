@@ -44,7 +44,6 @@ vim.keymap.set("v", "K", "k")
 -- Remap of ;
 vim.keymap.set("n", ";", ":", { noremap = true })
 vim.keymap.set("n", ":", ";", { noremap = true })
-vim.opt.timeoutlen = 200
 
 -- Ctrl D and E for upward and downward long navigation
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { noremap = true, silent = true })
@@ -58,8 +57,8 @@ vim.keymap.set("n", "<A-j>", ":m .+1<CR>==", { desc = "Move down" })
 vim.keymap.set("i", "<A-j>", "<Esc>:m .+1<CR>==gi", { desc = "Move down" })
 vim.keymap.set("i", "<A-k>", "<Esc>:m .-2<CR>==gi", { desc = "Move up" })
 
--- Select all (Normal Mode)
-vim.keymap.set("n", "<C-a>", "bbbggVGeee")
+-- Select all
+vim.keymap.set("n", "<C-a>", ":<C-u>normal! ggVG<CR>", { silent = true })
 
 -- Yanking Remap (No Previous Delete Last Copy)
 vim.keymap.set("x", "<leader>p", '"_dP')
