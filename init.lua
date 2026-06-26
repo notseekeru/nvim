@@ -1,4 +1,3 @@
--- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
 	vim.fn.system({
@@ -56,7 +55,7 @@ vim.keymap.set("n", "<leader>y", '"+y')
 
 dofile(vim.fn.stdpath("config") .. "/lsp.lua")
 
--- require("codediff").setup({}) -- Commented out until plugin is installed
+require("codediff").setup({})
 
 require("blink-cmp").setup({
 	keymap = {
