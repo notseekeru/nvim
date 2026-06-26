@@ -19,7 +19,15 @@ return require("lazy").setup({
 				indent = { enabled = true },
 				input = { enabled = true },
 				notifier = { enabled = true, style = "compact" },
-				picker = { enabled = true },
+				picker = {
+					enabled = true,
+					sources = {
+						explorer = {
+							hidden = true,
+							ignored = true,
+						},
+					},
+				},
 				quickfile = { enabled = true },
 				scroll = { enabled = true },
 				statuscolumn = { enabled = true },
