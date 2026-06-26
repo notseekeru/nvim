@@ -2,13 +2,11 @@ return require("lazy").setup({
     "nvim-lua/plenary.nvim",
     {
         "nvim-treesitter/nvim-treesitter",
-        build = ":TSUpdate",
         config = function()
-            require("nvim-treesitter.configs").setup({
-                highlight = { enable = true },
-                ensure_installed = { "lua", "vim", "vimdoc", "query", "go", "python", "rust", "javascript", "typescript" },
-                auto_install = true,
-            })
+            local ok, configs = pcall(require, "nvim-treesitter.configs")
+            if ok then
+                configs.setup({ highlight = { enable = true } })
+            end
         end,
     },
     {
@@ -92,7 +90,7 @@ return require("lazy").setup({
     {
         "neovim/nvim-lspconfig",
         config = function()
-            require("lua.lsp")
+            require("lsp")
         end,
     },
 })
