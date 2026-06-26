@@ -53,7 +53,6 @@ vim.keymap.set("x", "<leader>p", '"_dP')
 vim.keymap.set("v", "<leader>y", '"+y')
 vim.keymap.set("n", "<leader>y", '"+y')
 
-dofile(vim.fn.stdpath("config") .. "/lsp.lua")
 
 require("codediff").setup({})
 

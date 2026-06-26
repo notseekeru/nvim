@@ -11,7 +11,16 @@ return require("lazy").setup({
 	"catppuccin/nvim",
 	"esmuellert/codediff.nvim",
 	"f-person/git-blame.nvim",
+	{
+		"saghen/blink.cmp",
+		version = "*",
+	},
 	"williamboman/mason.nvim",
 	"williamboman/mason-lspconfig.nvim",
-	"neovim/nvim-lspconfig",
+	{
+		"neovim/nvim-lspconfig",
+		config = function()
+			require("lsp")
+		end,
+	},
 })
